@@ -1,0 +1,5 @@
+var SimplePromise = function() {};
+
+SimplePromise.prototype.then = function() {};
+
+SimplePromise.prototype.catch = function() {};

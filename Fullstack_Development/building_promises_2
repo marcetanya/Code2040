@@ -1,0 +1,10 @@
+var SimplePromise = function(executor) {
+  let resolve = function() {};
+  let reject = function() {};
+
+  executor(resolve, reject);
+};
+
+SimplePromise.prototype.then = function() {};
+
+SimplePromise.prototupe.catch = function() {};

@@ -1,0 +1,21 @@
+var SimplePromise = function(executor) {
+  let resolve = function(value) {
+    return value;
+  };
+
+  let reject = function(error) {
+    return error;
+  };
+
+  executor(resolve, reject);
+};
+
+SimplePromise.prototype.then = function(onFulfilled, onRejected) {
+  if(onFulfilled != undefined) {
+    onFulfilled();
+  } else {
+    onRejected();
+  };
+};
+
+SimplePromise.prototype.catch = function() {};
